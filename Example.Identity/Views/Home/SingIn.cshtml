@@ -1,0 +1,28 @@
+﻿@using Example.Identity.Models
+@model UserSingInModel
+@{
+    ViewData["Title"] = "Sing In";
+}
+
+<form asp-action="SingIn" method="post" class="p-3 w-75 mx-auto shadow">
+    <div class="mb-3">
+        <label>Kullanıcı Adı</label>
+        <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+        <input type="text" asp-for="@Model.UserName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>PASS</label>
+        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+        <input type="text" asp-for="@Model.Password" class="form-control" />
+    </div>
+
+     
+
+    <div class="mb-3">
+        <button class="btn btn-success" type="submit">Kayıt Ol</button>
+    </div>
+
+    <div class="text-danger mt-2" asp-validation-summary="ModelOnly">
+    </div>
+</form>

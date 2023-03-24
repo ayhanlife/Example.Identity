@@ -1,0 +1,16 @@
+												Asp net core Identity
+
+
+
+Authentication																		UserManger<TUser>
+	Giriþ yetkisi, 
+	okula gitmek için öðrenci olmak lazým.
+
+
+Authorization																		RoleManger<TRole>
+	Ýlgili öðrecinin  nerelere girme hakký var
+	örnek ögrencý ogretmeneler odesýna giremez
+	ama ögretmen hem sýnýfa 
+
+
+Claims																				SingInManger<TUser>

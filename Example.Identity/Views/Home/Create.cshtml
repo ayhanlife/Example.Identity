@@ -1,0 +1,50 @@
+﻿@using Example.Identity.Models
+@model UserCreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-action="Create" method="post" class="p-3 w-75 mx-auto shadow">
+    <div class="mb-3">
+        <label>Kullanıcı Adı</label>
+        <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+        <input type="text" asp-for="@Model.UserName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <span asp-validation-for="@Model.Email" class="text-danger"></span>
+        <input type="email" asp-for="@Model.Email" class="form-control" />
+    </div>
+
+
+    <div class="mb-3">
+        <label>Şife</label>
+        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+        <input type="password" asp-for="@Model.Password" class="form-control" />
+    </div>
+
+
+    <div class="mb-3">
+        <label>Şifre Tekrar</label>
+        <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
+        <input type="password" asp-for="@Model.ConfirmPassword" class="form-control" />
+    </div>
+
+
+
+    <div class="mb-3">
+        <label>Cinsiyet</label>
+        <span asp-validation-for="@Model.Gender" class="text-danger"></span>
+        <input type="text" asp-for="@Model.Gender" class="form-control" />
+    </div>
+
+
+    <div class="mb-3">
+        <button class="btn btn-success" type="submit">Kayıt Ol</button>
+    </div>
+
+    <div class="text-danger mt-2" asp-validation-summary="ModelOnly">
+
+    </div>
+</form>
